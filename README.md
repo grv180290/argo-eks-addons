@@ -43,6 +43,12 @@ spec:
     repoURL: https://github.com/Pacobart/argo-eks-addons.git
     targetRevision: HEAD
     path: addons
+    helm:
+      release: add-ons
+      values: |
+        region: us-west-2
+        account: XXXXXXXXXXXX
+        clusterName: devops-eks
         
   destination:
     server: https://kubernetes.default.svc
