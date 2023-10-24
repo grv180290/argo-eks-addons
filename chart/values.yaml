@@ -1,0 +1,16 @@
+# Global Values
+repoUrl: 'https://github.com/Pacobart/argo-eks-addons'
+targetRevision: HEAD
+region: ''
+account: ''
+clusterName: ''
+destinationServer: ''
+argoNamespace: ''
+argoProject: ''
+
+# External DNS Values
+externalDns:
+  enable: true
+  createNamespace: true
+  serviceAccountName:
+  zoneIdFilter:
