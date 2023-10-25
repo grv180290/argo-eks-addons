@@ -23,6 +23,8 @@ spec:
         value: {{ .Values.externalDns.serviceAccountName }}
       - name: external-dns.zoneIdFilters[0]
         value: {{ .Values.externalDns.zoneIdFilter }}
+      - name: external-dns.txtOwnerId
+        value: {{ .Values.clusterName }}
   destination:
     server: {{ .Values.destinationServer | default "https://kubernetes.default.svc" }}
     namespace: external-dns

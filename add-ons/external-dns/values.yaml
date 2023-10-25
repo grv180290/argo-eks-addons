@@ -3,3 +3,8 @@ external-dns:
     create: false
     name: "external-dns-sa"
   provider: "aws"
+  policy: sync
+  serviceMonitor:
+    enabled: true
+  zoneIdFilters:
+  txtOwnerId:
