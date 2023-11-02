@@ -51,7 +51,6 @@ externalDns:
 gatekeeper:
   enable: true
   createNamespace: true
-  clusterName:
 
 # Nginx Values
 ingressNginx:

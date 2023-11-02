@@ -16,6 +16,9 @@ spec:
       values: |
         gatekeeper:
         {{- toYaml .Values.gatekeeper | nindent 10 }}
+      parameters:
+      - name: gatekeeper.clusterName
+        value: {{ .Values.clusterName }}
   destination:
     server: {{ .Values.destinationServer | default "https://kubernetes.default.svc" }}
     namespace: gatekeeper-system
