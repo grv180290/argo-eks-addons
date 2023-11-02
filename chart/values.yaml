@@ -10,7 +10,7 @@ argoProject: ''
 
 # AWS Load Balancer Controller Values
 awsLoadBalancerController:
-  enable: false
+  enable: true
   createNamespace: true
   serviceAccountName:
   podDisruptionBudget:
@@ -32,35 +32,35 @@ awsLoadBalancerController:
 
 # Cert Manager Values
 certManager:
-  enable: false
+  enable: true
   createNamespace: true
   serviceAccountName:
 
 # Cert Manager CSI Driver Values
 certManagerCsiDriver:
-  enable: false
+  enable: true
 
 # External DNS Values
 externalDns:
-  enable: false
+  enable: true
   createNamespace: true
   serviceAccountName:
   zoneIdFilter:
 
 # Gatekeeper Values
 gatekeeper:
-  enable: false
+  enable: true
   createNamespace: true
   clusterName:
 
 # Nginx Values
 ingressNginx:
-  enable: false
+  enable: true
   createNamespace: true
 
 # Karpenter Values
 karpenter:
-  enable: false
+  enable: true
   createNamespace: true
   serviceAccountName:
   controllerClusterEndpoint:
@@ -69,7 +69,7 @@ karpenter:
 
 # Argo Rollout Values
 argoRollouts:
-  enable: false
+  enable: true
   createNamespace: true
 
 # Argo Rollout Values
@@ -78,30 +78,30 @@ argoWorkflows:
 
 # Metrics Server Values
 metricsServer:
-  enable: false
+  enable: true
 
 # kubecost Values
 kubecost:
-  enable: false
+  enable: true
 
 # Kube Prometheus Stack
 kubePrometheusStack:
-  enable: false
+  enable: true
 
 # AWS Otel Collector Values
 awsOtelCollector:
-  enable: false
+  enable: true
   createNamespace: true
   otlpEndpoint:
   resourceAttributes:
 
 opentelemetryCollector:
-  enable: false
+  enable: true
   serviceAccountName:
 
 # AWS for Fluent Bit Values
 awsForFluentBit:
-  enable: false
+  enable: true
   createNamespace: true
   logGroupName:
   serviceAccountName:
