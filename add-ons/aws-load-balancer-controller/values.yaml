@@ -1,4 +1,6 @@
 aws-load-balancer-controller:
   serviceAccount:
-    create: false
+    create: true
     name: aws-load-balancer-controller-sa
+    annotations:
+      eks.amazonaws.com/role-arn:

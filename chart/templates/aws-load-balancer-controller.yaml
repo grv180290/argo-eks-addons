@@ -19,7 +19,7 @@ spec:
           region: {{ .Values.region }}
           serviceAccount:
             name: {{ .Values.awsLoadBalancerController.serviceAccountName }}
-            create: false
+            create: true
         {{- toYaml .Values.awsLoadBalancerController | nindent 10 }}
   destination:
     server: {{ .Values.destinationServer | default "https://kubernetes.default.svc" }}
