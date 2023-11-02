@@ -8,9 +8,100 @@ destinationServer: ''
 argoNamespace: ''
 argoProject: ''
 
+# AWS Load Balancer Controller Values
+awsLoadBalancerController:
+  enable: false
+  createNamespace: true
+  serviceAccountName:
+  podDisruptionBudget:
+    maxUnavailable: 1
+  respectIgnoreDifferences: true
+  ignoreDifferences:
+  - group: ""
+    kind: "Secret"
+    jsonPointers:
+    - /data
+  - group: "admissionregistration.k8s.io"
+    kind: "MutatingWebhookConfiguration"
+    jqPathExpressions:
+    - '.webhooks[]?.clientConfig.caBundle'
+  - group: "admissionregistration.k8s.io"
+    kind: "ValidatingWebhookConfiguration"
+    jqPathExpressions:
+    - '.webhooks[]?.clientConfig.caBundle'
+
+# Cert Manager Values
+certManager:
+  enable: false
+  createNamespace: true
+  serviceAccountName:
+
+# Cert Manager CSI Driver Values
+certManagerCsiDriver:
+  enable: false
+
 # External DNS Values
 externalDns:
-  enable: true
+  enable: false
   createNamespace: true
   serviceAccountName:
   zoneIdFilter:
+
+# Gatekeeper Values
+gatekeeper:
+  enable: false
+  createNamespace: true
+  clusterName:
+
+# Nginx Values
+ingressNginx:
+  enable: false
+  createNamespace: true
+
+# Karpenter Values
+karpenter:
+  enable: false
+  createNamespace: true
+  serviceAccountName:
+  controllerClusterEndpoint:
+  awsDefaultInstanceProfile:
+  interruptionQueueName:
+
+# Argo Rollout Values
+argoRollouts:
+  enable: false
+  createNamespace: true
+
+# Argo Rollout Values
+argoWorkflows:
+  enable: false
+
+# Metrics Server Values
+metricsServer:
+  enable: false
+
+# kubecost Values
+kubecost:
+  enable: false
+
+# Kube Prometheus Stack
+kubePrometheusStack:
+  enable: false
+
+# AWS Otel Collector Values
+awsOtelCollector:
+  enable: false
+  createNamespace: true
+  otlpEndpoint:
+  resourceAttributes:
+
+opentelemetryCollector:
+  enable: false
+  serviceAccountName:
+
+# AWS for Fluent Bit Values
+awsForFluentBit:
+  enable: false
+  createNamespace: true
+  logGroupName:
+  serviceAccountName:
