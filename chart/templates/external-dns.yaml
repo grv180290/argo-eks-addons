@@ -21,8 +21,8 @@ spec:
         value: {{ .Values.region }}
       - name: external-dns.serviceAccount.name
         value: {{ .Values.externalDns.serviceAccountName }}
-      - name: external-dns.zoneIdFilters[0]
-        value: {{ .Values.externalDns.zoneIdFilter }}
+      - name: external-dns.zoneIdFilters
+        value: {{ .Values.externalDns.zoneIdFilters }}
       - name: external-dns.txtOwnerId
         value: {{ .Values.clusterName }}
   destination:
