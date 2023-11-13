@@ -1,7 +1,7 @@
 external-dns:
   serviceAccount:
     create: true
-    name: "external-dns-sa"
+    name: "external-dns"
     annotations:
       "eks.amazonaws.com/role-arn":
   provider: "aws"
