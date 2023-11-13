@@ -8,5 +8,5 @@ external-dns:
   policy: sync
   serviceMonitor:
     enabled: true
-  zoneIdFilters: []
+  zoneIdFilters:
   txtOwnerId:
