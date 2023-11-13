@@ -45,7 +45,7 @@ externalDns:
   enable: true
   createNamespace: true
   serviceAccountName:
-  zoneIdFilter:
+  zoneIdFilters:
 
 # Gatekeeper Values
 gatekeeper:
