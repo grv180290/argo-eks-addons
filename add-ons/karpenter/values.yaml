@@ -1,11 +1,13 @@
 karpenter:
   serviceAccount:
-    create: false
+    create: true
+    annotations:
+      "eks.amazonaws.com/role-arn":
   nodeSelector:
     kubernetes.io/os: linux
   settings:
-    aws:
-      clusterName:
-      clusterEndpoint:
-      defaultInstanceProfile:
-      interruptionQueueName:
+    clusterName:
+    assumeRoleARN:
+    interruptionQueue:
+  serviceMonitor:
+    enabled: true

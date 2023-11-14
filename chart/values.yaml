@@ -62,9 +62,8 @@ karpenter:
   enable: true
   createNamespace: true
   serviceAccountName:
-  controllerClusterEndpoint:
-  awsDefaultInstanceProfile:
-  interruptionQueueName:
+  assumeRoleARN:
+  interruptionQueue:
 
 # Argo Rollout Values
 argoRollouts:
