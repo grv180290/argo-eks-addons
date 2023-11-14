@@ -7,7 +7,6 @@ karpenter:
     kubernetes.io/os: linux
   settings:
     clusterName:
-    assumeRoleARN:
     interruptionQueue:
   serviceMonitor:
     enabled: true

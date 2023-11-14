@@ -62,7 +62,6 @@ karpenter:
   enable: true
   createNamespace: true
   serviceAccountName:
-  assumeRoleARN:
   interruptionQueue:
 
 # Argo Rollout Values

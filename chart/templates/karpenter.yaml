@@ -21,8 +21,6 @@ spec:
           value: {{ .Values.karpenter.serviceAccountName }}
         - name: karpenter.settings.clusterName
           value: {{ .Values.clusterName }}
-        - name: karpenter.settings.assumeRoleARN
-          value: {{ .Values.karpenter.assumeRoleARN }}
         - name: karpenter.settings.interruptionQueue
           value: {{ .Values.karpenter.awsInterruptionQueueName }}
   destination:
