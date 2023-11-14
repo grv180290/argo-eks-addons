@@ -5,6 +5,7 @@ cost-analyzer:
       proxy: false
     prometheus:
       enabled: false
+      fqdn: http://kube-prometheus-stack-prometheus.kube-prometheus-stack.svc:9090
 
   imageVersion: prod-1.107.0
   kubecostFrontend:
@@ -40,13 +41,13 @@ cost-analyzer:
   reporting:
     productAnalytics: false
 
-networkPolicy:
-  enabled: true
-  costAnalyzer:
+  networkPolicy:
     enabled: true
-
-networkCosts:
-  enabled: true
-
-serviceMonitor:
-  enabled: true
+    costAnalyzer:
+      enabled: true
+  
+  networkCosts:
+    enabled: true
+  
+  serviceMonitor:
+    enabled: true
