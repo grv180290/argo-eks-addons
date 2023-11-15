@@ -49,6 +49,7 @@ spec:
         region: us-west-2
         account: XXXXXXXXXXXX
         clusterName: devops-eks
+        environment: dev
         
   destination:
     server: https://kubernetes.default.svc
@@ -63,4 +64,26 @@ spec:
 
 ## How to apply different values to environments
 
-TODO
+1. Add a valueFiles section into the chart/templates/<addon>.yaml file. Ex: https://github.com/Pacobart/argo-eks-addons/blob/main/chart/templates/ingress-nginx.yaml#L16-L18
+2. Create `values-<environemnt>.yaml` file in add-ons/<addon>
+3. Add environment specific values here. We reference the base `values.yaml` as well for global changes
+
+## How to have different chart versions per environment:
+
+1. restructure addon directory in `add-ons/<addon>` like the following
+```
+ingress-nginx
+-- dev
+---- Chart.yaml
+---- values.yaml
+-- uat
+---- Chart.yaml
+---- values.yaml
+-- prod
+---- Chart.yaml
+---- values.yaml
+```
+2. Modify `chart/templates/<addon>.yaml` file:
+```
+spec.project.source.path: add-ons/ingress-nginx/{{ .Values.environment}}
+```
