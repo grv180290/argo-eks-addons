@@ -13,6 +13,9 @@ spec:
     path: add-ons/ingress-nginx
     targetRevision: {{ .Values.targetRevision }}
     helm:
+      valueFiles:
+      - values.yaml
+      #- values-{{ .Values.environment }}.yaml #if adding environment specific variables
       values: |
         ingress-nginx:
         {{- toYaml .Values.ingressNginx | nindent 10 }}
