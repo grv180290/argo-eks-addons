@@ -55,7 +55,7 @@ gatekeeper:
 
 # Nginx Values
 ingressNginx:
-  enable: false
+  enable: true
   createNamespace: true
 
 # Karpenter Values
