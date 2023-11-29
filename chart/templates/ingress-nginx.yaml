@@ -19,10 +19,10 @@ spec:
       values: |
         ingress-nginx:
         {{- toYaml .Values.ingressNginx | nindent 10 }}
-        controller:
-          service:
-            annotations:
-              service.beta.kubernetes.io/aws-load-balancer-name: {{ .Values.clusterName }}-ing-nginx
+          controller:
+            service:
+              annotations:
+                service.beta.kubernetes.io/aws-load-balancer-name: {{ .Values.clusterName }}-ing-nginx
   destination:
     server: {{ .Values.destinationServer | default "https://kubernetes.default.svc" }}
     namespace: ingress-nginx
