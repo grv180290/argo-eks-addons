@@ -8,6 +8,7 @@ environment: ''
 destinationServer: ''
 argoNamespace: ''
 argoProject: ''
+domain_name_suffix: ''
 
 # AWS Load Balancer Controller Values
 awsLoadBalancerController:

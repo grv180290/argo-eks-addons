@@ -23,7 +23,7 @@ spec:
             service:
               annotations:
                 service.beta.kubernetes.io/aws-load-balancer-name: {{ .Values.clusterName }}-ing-nginx
-                external-dns.alpha.kubernetes.io/hostname: {{ .Values.clusterName }}-ing.devopseks.lab
+                external-dns.alpha.kubernetes.io/hostname: {{ .Values.clusterName }}-ing.{{ .Values.domain_name_suffix }}
   destination:
     server: {{ .Values.destinationServer | default "https://kubernetes.default.svc" }}
     namespace: ingress-nginx
