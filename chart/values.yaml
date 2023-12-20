@@ -85,7 +85,7 @@ kubecost:
 
 # Kube Prometheus Stack
 kubePrometheusStack:
-  enable: true
+  enable: false
 
 # AWS Otel Collector Values
 awsOtelCollector:

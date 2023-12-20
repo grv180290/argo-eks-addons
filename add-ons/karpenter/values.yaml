@@ -7,4 +7,4 @@ karpenter:
     clusterName:
     interruptionQueue:
   serviceMonitor:
-    enabled: true
+    enabled: false
