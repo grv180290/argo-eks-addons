@@ -5,6 +5,6 @@ external-dns:
   provider: "aws"
   policy: sync
   serviceMonitor:
-    enabled: true
+    enabled: false
   zoneIdFilters:
   txtOwnerId:
