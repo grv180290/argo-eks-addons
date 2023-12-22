@@ -1,6 +1,6 @@
 aws-for-fluent-bit:
   serviceAccount:
-    create: false
+    create: true
 
   cloudWatch:
 
