@@ -51,7 +51,7 @@ externalDns:
 
 # Gatekeeper Values
 gatekeeper:
-  enable: true
+  enable: false
   createNamespace: true
 
 # Nginx Values
