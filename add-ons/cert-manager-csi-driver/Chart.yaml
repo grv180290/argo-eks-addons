@@ -13,5 +13,5 @@ appVersion: "1.0"
 
 dependencies:
 - name: cert-manager-csi-driver
-  version: v0.4.2
+  version: v0.6.0
   repository: https://charts.jetstack.io
