@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/grv180290/eks-addons.git
     targetRevision: HEAD
-    path: 'apps'
+    path: 'chart/templates/metrics-server.yaml'
   destination:
     server: https://kubernetes.default.svc
     namespace: kube-system
